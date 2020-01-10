@@ -1,0 +1,48 @@
+#ConditionalMaker {
+  width: 100%;
+}
+
+#ConditionalMaker #selection_row {
+  width: calc(100% - 100px);
+  padding: 0px 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+#ConditionalMaker #selection_row .text {
+  color: white;
+  margin: 0px 15px 0px 0px;
+  margin-top: 8px;
+}
+
+#ConditionalMaker .question_button_selected {
+  margin: 3px 15px 0px 0px;
+  padding: 7px;
+  cursor: pointer;
+  background-color: inherit;
+  color: #f7ba02;
+  border: 1px solid #f7ba02;
+  border-radius: 4px;
+}
+
+
+#ConditionalMaker .question_button {
+  margin: 3px 15px 0px 0px;
+  padding: 7px;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+#ConditionalMaker .question_button_unclickable {
+  margin: 3px 15px 0px 0px;
+  padding: 7px;
+  background-color: inherit;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}

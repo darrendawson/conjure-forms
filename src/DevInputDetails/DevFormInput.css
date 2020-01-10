@@ -1,0 +1,81 @@
+#DevFormInput {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+#DevFormInput .form_input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+
+#DevFormItemInput {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+#DevFormItemInput .form_input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#DevFormItemInput .form_input_container.with_margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form_input_container .input_row {
+  width: calc(100% - 40px);
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form_input_container .input_row .input_title {
+  width: 200px;
+  text-align: left;
+  color: white;
+  margin-left: 20px;
+}
+
+.form_input_container .input_row .form_input {
+}
+
+.form_input_container .section_title {
+  padding-left: 20px;
+  color: white;
+}
+
+.form_input_container .button {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.form_input_container .button_selected {
+  background-color: #f7ba02;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.form_input_container .color_square {
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  margin-right: 25px;
+}

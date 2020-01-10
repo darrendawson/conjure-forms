@@ -1,0 +1,115 @@
+/* <ConjureFormComponent/> ---------------------------------------------------*/
+
+#ConjureFormComponent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: left;
+}
+
+#ConjureFormComponent .dev_mode_hover:hover {
+  border: 1px solid #f7ba02;
+  cursor: pointer;
+}
+
+#ConjureFormComponent .dev_mode_selected {
+  border: 3px solid #f7ba02;
+}
+
+#ConjureFormComponent .container_type_page {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  border-bottom: 2px dotted black;
+}
+
+#ConjureFormComponent .container_type_card {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+#ConjureFormComponent .container_type_subcard {
+  width: calc(100% - 40px);
+  margin: 10px 0px;
+}
+
+#ConjureFormComponent #empty_space {
+  height: 120px;
+}
+
+#ConjureFormComponent #new_array_subform_button_container {
+  width: calc(100% - 60px);
+  padding: 5px 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#ConjureFormComponent #new_array_subform_button_container #new_array_subform_button {
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+#ConjureFormComponent #dismiss_subform_button_row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ConjureFormComponent #dismiss_subform_button_row #dismiss_subform_button {
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  text-align: right;
+  border-radius: 13px;
+  height: 26px;
+  width: 26px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+
+/* <ConjureFormItemComponent/> -----------------------------------------------*/
+
+#ConjureFormItemComponent {
+  display: flex;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+#ConjureFormItemComponent .item_container {
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#ConjureFormItemComponent .item_container .item_text_margins {
+  margin: 5px;
+}
+
+#ConjureFormItemComponent .item_container .item_text_no_margins {
+  margin: 0px;
+}
+
+#ConjureFormItemComponent .item_container #section_title_text_container {
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+
+#ConjureFormItemComponent .dev_mode_off_border {
+
+}

@@ -1,0 +1,261 @@
+#ProductionFormContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+
+#ProductionFormContainer #form_container {
+  width: 100%;
+  max-width: 1400px;
+  padding-bottom: 40px;
+}
+
+/* <ConjureFormComponent/> ---------------------------------------------------*/
+
+#ConjureFormComponent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: left;
+}
+
+#ConjureFormComponent .dev_mode_hover:hover {
+  border: 1px solid #f7ba02;
+  cursor: pointer;
+}
+
+#ConjureFormComponent .dev_mode_selected {
+  border: 3px solid #f7ba02;
+}
+
+#ConjureFormComponent .container_type_page {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  border-bottom: 2px dotted black;
+}
+
+#ConjureFormComponent .container_type_card {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+#ConjureFormComponent .container_type_subcard {
+  width: calc(100% - 40px);
+  margin: 10px 0px;
+}
+
+#ConjureFormComponent #empty_space {
+  height: 120px;
+}
+
+#ConjureFormComponent #new_array_subform_button_container {
+  width: calc(100% - 60px);
+  padding: 5px 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#ConjureFormComponent #new_array_subform_button_container #new_array_subform_button {
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+#ConjureFormComponent #dismiss_subform_button_row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ConjureFormComponent #dismiss_subform_button_row #dismiss_subform_button {
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  text-align: right;
+  border-radius: 13px;
+  height: 26px;
+  width: 26px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+
+/* <ConjureFormItemComponent/> -----------------------------------------------*/
+
+#ConjureFormItemComponent {
+  display: flex;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+#ConjureFormItemComponent .item_container {
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#ConjureFormItemComponent .item_container .item_text_margins {
+  margin: 5px;
+}
+
+#ConjureFormItemComponent .item_container .item_text_no_margins {
+  margin: 0px;
+}
+
+#ConjureFormItemComponent .item_container #section_title_text_container {
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+
+#ConjureFormItemComponent .dev_mode_off_border {
+
+}
+
+#FormQuestionInput {
+
+}
+
+#FormQuestionInput #question_input {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+#MultipleChoice {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+#MultipleChoice .choice_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6px;
+}
+
+#MultipleChoice .select_button {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#MultipleChoice .choice_text {
+  margin: 0px;
+}
+
+
+#MultipleChoice #dropdown_full_container {
+  width: 300px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#MultipleChoice .dropdown_title_container {
+  height: 40px;
+  width: calc(100% - 20px);
+  padding: 0px 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#MultipleChoice .dropdown_choices_column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+#MultipleChoice .dropdown_item_container {
+  width: 97%;
+}
+
+#RenderFormOutputObject {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#RenderFormOutputObject #output_container {
+  width: 100%;
+  background-color: #282828;
+  text-align: left;
+}
+
+#RenderFormOutputObject #buttons_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#RenderFormOutputObject #copy_output_text_clickable {
+  color: grey;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+#RenderFormOutputObject #copy_output_text_clickable:hover {
+  color: white;
+}
+
+
+#RenderFormOutputObject .text {
+  margin: 2px;
+  color: white;
+  font-size: 1.1em;
+}
+
+#RenderFormOutputObject .text_banned {
+  margin: 2px;
+  color: grey;
+  font-size: 1.1em;
+}
+
+#RenderFormOutputObject .text_clickable {
+  font-size: 1.1em;
+}
+
+#RenderFormOutputObject .text_clickable:hover {
+  color: #f7ba02;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+#RenderFormOutputObject .text_clickable_selected {
+  background-color: #f7ba02;
+  color: #282828;
+  font-size: 1.1em;
+}
+

@@ -1,0 +1,72 @@
+#MultipleChoiceMaker {
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+
+#MultipleChoiceMaker #title_container {
+  width: 220px;
+}
+
+#MultipleChoiceMaker #choices_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#MultipleChoiceMaker #choices_container #new_choice_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 12px;
+}
+
+#MultipleChoiceMaker #add_new_choice_button {
+  margin-left: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  width: 40px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+#MultipleChoiceMaker #add_new_choice_button:hover {
+  background-color: #f7ba02;
+}
+
+#MultipleChoiceMaker .choice_row {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#MultipleChoiceMaker .choice_item {
+  background-color: #5e5e5e;
+  padding: 0px 10px;
+  text-align: left;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+
+#MultipleChoiceMaker .choice_text {
+  margin: 0px;
+  color: white;
+  font-size: 1.1em;
+}
+
+#MultipleChoiceMaker .delete_choice_button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#MultipleChoiceMaker .delete_choice_button:hover {
+  color: #f7ba02;
+}
