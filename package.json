@@ -1,7 +1,7 @@
 {
   "name": "conjure-form",
   "version": "0.0.1",
-  "description": "Conjure Forms",
+  "description": "Highly Customizable Surveys for React.js",
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^15.5.4"

@@ -7,6 +7,7 @@ import React from 'react';
 import ProductionFormContainer from './Render/ProductionFormContainer/ProductionFormContainer.js';
 import ConjureForm from './ConjureForm.js';
 
+
 class ConjureFormController {
 
   constructor(formJSON = false, rerenderFunction) {
@@ -21,12 +22,13 @@ class ConjureFormController {
     this.rerender = rerenderFunction;
 
     // bind class functions so they have the proper version of `this`
-    this.onInput_answerFormQuestion           = this.onInput_answerFormQuestion.bind(this);
-    this.onClick_answerMultipleChoiceQuestion = this.onClick_answerMultipleChoiceQuestion.bind(this);
-    this.onClick_addNewSubformToArray         = this.onClick_addNewSubformToArray.bind(this);
-    this.onClick_removeSubformFromArray       = this.onClick_removeSubformFromArray.bind(this);
-    this.onClick_moveToPage                   = this.onClick_moveToPage.bind(this);
-    this.renderForm                           = this.renderForm.bind(this);
+    this._onInput_answerFormQuestion           = this._onInput_answerFormQuestion.bind(this);
+    this._onClick_answerMultipleChoiceQuestion = this._onClick_answerMultipleChoiceQuestion.bind(this);
+    this._onClick_addNewSubformToArray         = this._onClick_addNewSubformToArray.bind(this);
+    this._onClick_removeSubformFromArray       = this._onClick_removeSubformFromArray.bind(this);
+    this._onClick_moveToPage                   = this._onClick_moveToPage.bind(this);
+    this.renderForm                            = this.renderForm.bind(this);
+    this.getFormResults                        = this.getFormResults.bind(this);
   }
 
   // ConjureForm Functions -----------------------------------------------------
@@ -34,27 +36,27 @@ class ConjureFormController {
     Functions that get passed to ConjureForm so it can manage state when user answers questions
   */
 
-  onInput_answerFormQuestion(itemID, value) {
+  _onInput_answerFormQuestion(itemID, value) {
     this.formOutput.answerInputQuestion(value, itemID);
     this.rerender();
   }
 
-  onClick_answerMultipleChoiceQuestion(value, itemID) {
+  _onClick_answerMultipleChoiceQuestion(value, itemID) {
     this.formOutput.answerMultipleChoiceQuestion(value, itemID);
     this.rerender();
   }
 
-  onClick_addNewSubformToArray(arrayID) {
+  _onClick_addNewSubformToArray(arrayID) {
     this.formOutput.declareNewArrayItem(arrayID);
     this.rerender();
   }
 
-  onClick_removeSubformFromArray(arrayID, subformIndex) {
+  _onClick_removeSubformFromArray(arrayID, subformIndex) {
     this.formOutput.removeArrayItem(arrayID, subformIndex);
     this.rerender();
   }
 
-  onClick_moveToPage(moveType) {
+  _onClick_moveToPage(moveType) {
     if (moveType == "next") {
       this.currentPage += 1;
       this.rerender();
@@ -62,6 +64,15 @@ class ConjureFormController {
       this.currentPage -= 1;
       this.rerender();
     }
+  }
+
+  // ConjureFormOutput ---------------------------------------------------------
+  /*
+    Functions for dealing with the output of the conjure form
+  */
+
+  getFormResults() {
+    return this.formOutput.exportAsObj(true);
   }
 
   // Render --------------------------------------------------------------------
@@ -72,12 +83,12 @@ class ConjureFormController {
         conjureForm={this.conjureForm}
         formOutput={this.formOutput}
         currentPageIndex={this.currentPage}
-        onClick_deselectItem={() => this.onClick_selectFormSection(false)}
-        onInput_answerFormQuestion={this.onInput_answerFormQuestion}
-        onClick_answerMultipleChoiceQuestion={this.onClick_answerMultipleChoiceQuestion}
-        onClick_addNewSubformToArray={this.onClick_addNewSubformToArray}
-        onClick_removeSubformFromArray={this.onClick_removeSubformFromArray}
-        onClick_moveToPage={this.onClick_moveToPage}
+        onClick_deselectItem={() => this._onClick_selectFormSection(false)}
+        onInput_answerFormQuestion={this._onInput_answerFormQuestion}
+        onClick_answerMultipleChoiceQuestion={this._onClick_answerMultipleChoiceQuestion}
+        onClick_addNewSubformToArray={this._onClick_addNewSubformToArray}
+        onClick_removeSubformFromArray={this._onClick_removeSubformFromArray}
+        onClick_moveToPage={this._onClick_moveToPage}
       />
     );
   }
