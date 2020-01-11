@@ -11,12 +11,6 @@ import ConjureForm from './ConjureForm.js';
 class ConjureFormController {
 
   constructor(formJSON = false, rerenderFunction) {
-    this.conjureForm = new ConjureForm();
-    if (formJSON !== false) {
-      this.conjureForm.loadConjureForm(formJSON);
-    }
-    this.formOutput = this.conjureForm.getFormOutputObject();
-    this.currentPage = 0;
 
     // so that ConjureFormController can envoke the parent component to rerender
     this.rerender = rerenderFunction;
@@ -29,8 +23,23 @@ class ConjureFormController {
     this._onClick_moveToPage                   = this._onClick_moveToPage.bind(this);
     this.renderForm                            = this.renderForm.bind(this);
     this.getFormResults                        = this.getFormResults.bind(this);
+    this.renderFormResults                     = this.renderFormResults.bind(this);
+    this.loadForm                              = this.loadForm.bind(this);
+
+    // initialize ConjureForm and Form Output
+    this.loadForm(formJSON);
   }
 
+  // loads a new ConjureForm
+  loadForm(formJSON = false) {
+    this.conjureForm = new ConjureForm();
+    if (formJSON !== false) {
+      this.conjureForm.loadConjureForm(formJSON);
+    }
+    this.formOutput = this.conjureForm.getFormOutputObject();
+    this.currentPage = 0;
+    this.rerender();
+  }
   // ConjureForm Functions -----------------------------------------------------
   /*
     Functions that get passed to ConjureForm so it can manage state when user answers questions
@@ -91,6 +100,11 @@ class ConjureFormController {
         onClick_moveToPage={this._onClick_moveToPage}
       />
     );
+  }
+
+
+  renderFormResults() {
+    return this.formOutput.render(true);
   }
 }
 

@@ -34,3 +34,14 @@ This will render the ConjureForm and fill 100% of the height / width of the div 
 
 #### 6. Grab The Form Results
  1. Inside the component, call `this.state.conjureForm.getFormResults();` to return the current output of the form with user inputted answers. This will be a JS object with the same structure as when you followed step 3 to generate the ConjureForm.
+
+
+## ConjureFormController Functions
+
+| Function | Explanation |
+| -------- | ----------- |
+| `new ConjureFormController(formJSON, rerenderFunction)` | Constructor for ConjureFormController, loads the Conjure Form specified in formJSON. rerenderFunction is a function you have to pass to the class from your component so it can force a React rerender when the user interacts with the Conjure Form. |
+| `.loadForm(formJSON)` | Loads a form from the JSON blueprint. Use this function to switch active forms or pass in the blueprint for the currently active form to reset state |
+| `.renderForm()` | renders the form |
+| `.renderFormResults()` | renders the JSON object of the user's answers to the form. This is typically used for development purposes. |
+|`.getFormResults(bool filterByRender)` | returns a JS object of the form results. If filterByRender is true, the result object will only have answers to questions that were rendered (so conditionally rendered subforms that weren't rendered will be missing)|

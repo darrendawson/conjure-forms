@@ -204,7 +204,8 @@
 
 #RenderFormOutputObject {
   width: 100%;
-  margin-top: 20px;
+  height: 100%;
+  /* margin-top: 20px; */
 }
 
 #RenderFormOutputObject #output_container {
@@ -232,7 +233,7 @@
 
 
 #RenderFormOutputObject .text {
-  margin: 2px;
+  margin: 0px;
   color: white;
   font-size: 1.1em;
 }
